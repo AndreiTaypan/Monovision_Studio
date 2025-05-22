@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+  /* вкл, выкл базовой нумерации */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------/ */
+
+
+.container {
+  /* max-width: 1420px; */
+  /* margin: 0 auto; */
+  padding: 0 var(--container-padding-inline);
+}
+
+*::selection {
+  color: #fff;
+  background-color: #47eff5;
+}
+
+.title {
+  color: var(--Dark-color, #221F20);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+
+  span {
+    position: relative;
+  }
+
+  span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 75px;
+    height: 2px;
+    background-color: #000;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 24px;
+  }
+}
